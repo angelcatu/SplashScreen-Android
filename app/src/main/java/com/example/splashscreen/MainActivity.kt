@@ -1,5 +1,6 @@
 package com.example.splashscreen
 
+import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import androidx.core.splashscreen.SplashScreen.Companion.installSplashScreen
@@ -14,6 +15,8 @@ class MainActivity : AppCompatActivity() {
 
         splashScreen.setKeepOnScreenCondition{ true }
 
+        startActivity(Intent(this, NextActivity::class.java))
+        finish()
 
     }
 }
